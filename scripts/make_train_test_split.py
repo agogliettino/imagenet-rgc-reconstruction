@@ -56,14 +56,6 @@ train_ns_tensor = io.get_stimulus_tensor(train_stimulus_path,'naturalscenes',
 test_ns_tensor = io.get_stimulus_tensor(test_stimulus_path,'naturalscenes',
                                     N_TEST,grayscale=True)
 
-# Crop the tensors (zero padded at the edges) and scale 0-1.
-"""
-train_ns_tensor = train_ns_tensor[...,33:288,:]
-train_ns_tensor /= 255.0
-test_ns_tensor = test_ns_tensor[...,33:288,:]
-test_ns_tensor /= 255.0
-"""
-
 # For flashed stimuli, convert to spike counts.
 spike_counts_tensor = np.sum(binned_spikes_tensor[...,0:N_MS_POST_FLASH],
                              axis=-1)
