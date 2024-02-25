@@ -1,7 +1,5 @@
 # imagenet-rgc-reco
 
-# repository for EE 367 final project
-
 `src` directory contains the main library of functions, including data set i/o, 
 preprocessing and the models. `scripts` directory contains a bunch of 
 preprocessing scripts and two others: `train_model.py`, which trains
